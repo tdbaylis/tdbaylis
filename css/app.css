@@ -4378,32 +4378,62 @@ table.hover tr:nth-of-type(even):hover {
 .long-delay {
   animation-delay: 700ms !important; }
 
-/* header */
-@media screen and (max-width: 39.9375em) {
-  .tdb-sitename {
-    display: none; } }
-
-@media screen and (min-width: 40em) {
-  .tdb-sitename {
-    padding-left: 30px; } }
+/* header - v1 
+@include breakpoint(small only) {
+	.tdb-sitename {
+		display: none;
+	}
+}
+@include breakpoint(medium up) {
+	.tdb-sitename {
+		padding-left: 30px;
+	}
+}
 
 .top-bar-bg {
-  position: relative; }
-
+	position: relative;
+}
 .tdb-brandmark {
-  background: url("../images/tb-mark.png") center center/contain no-repeat;
-  width: 70px;
-  height: 70px;
-  position: absolute;
-  top: -10px;
-  left: 2px;
-  display: inline-block; }
-
-.tdb-sitename {
-  font-family: "paralucent-condensed";
-  font-weight: 300;
-  font-size: 24px;
-  letter-spacing: 0.042em; }
-
+	background: url('../images/tb-mark.png') center center/contain no-repeat;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: -10px;
+	left: 2px;
+	display: inline-block;
+}
+.tdb-sitename {	
+	font-family: "paralucent-condensed";
+	font-weight: 300;
+	font-size: 24px;
+	letter-spacing: 0.042em;
+}
 li.menu-text {
-  padding-left: 50px; }
+	padding-left: 50px;
+}
+
+.menu-btn-container {
+	cursor: pointer;
+}
+
+*/
+/* header v2 */
+.menu-btn-container {
+  cursor: pointer; }
+
+@media screen and (max-width: 39.9375em) {
+  .tdb-brandmark {
+    background: url("../images/tb-mark.png") center center/contain no-repeat;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px;
+    display: block; }
+  .tdb-sitename {
+    text-align: center;
+    display: block;
+    font-family: "paralucent-condensed";
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: 0.042em; }
+  ul.dropdown.medium-horizontal {
+    text-align: center; } }

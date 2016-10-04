@@ -1,4 +1,4 @@
-/* header */
+/* header - v1 
 @include breakpoint(small only) {
 	.tdb-sitename {
 		display: none;
@@ -30,4 +30,40 @@
 }
 li.menu-text {
 	padding-left: 50px;
+}
+
+.menu-btn-container {
+	cursor: pointer;
+}
+
+*/
+
+
+/* header v2 */
+.menu-btn-container {
+	cursor: pointer;
+}
+
+@include breakpoint(small only) {
+	// menu branding
+	.tdb-brandmark {
+		background: url('../images/tb-mark.png') center center/contain no-repeat;
+		width: 50px;
+		height: 50px;
+		margin: 0 auto 10px;
+		display: block;
+	}
+	.tdb-sitename {
+		text-align: center;
+		display: block;
+		font-family: "paralucent-condensed";
+		font-weight: 500;
+		font-size: 18px;
+		letter-spacing: 0.042em;
+	}
+
+	// menu structure
+	ul.dropdown.medium-horizontal {
+		text-align: center;
+	}
 }
